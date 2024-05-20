@@ -52,4 +52,30 @@ void dokter::cetakPasien() {
     for (auto& a : daftar_pasien) {
         cout << a->nama << "\n";
     }
+    cout << endl;
 }
+
+int main() {
+    dokter* varDokter = new dokter("dr.dini");
+    dokter* vardokter2 = new dokter("dr.novi");
+    pasien* varpasien1 = new pasien("tomo");
+    pasien* varpasien2 = new pasien("rini");
+    
+    varDokter->tambahPasien(varpasien1);
+    varDokter->tambahPasien(varpasien2);
+    vardokter2->tambahPasien(varpasien2);
+    
+
+    varDokter1->cetakPasien();
+    varDokter2->cetakPasien();
+    varPasien1->cetakDokter();
+    varPasien2->cetakDokter();
+
+    delete varPasien1;
+    delete varPasien2;
+    delete varDokter1;
+    delete varDokter2;
+
+    return 0;
+}
+
